@@ -8,7 +8,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * @author jack
  */
-//@SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
 @SpringBootApplication
 @MapperScan("com.wwjswly.learn.mapper")
 @EnableSwagger2
