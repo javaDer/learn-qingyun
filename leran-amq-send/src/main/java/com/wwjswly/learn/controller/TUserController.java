@@ -6,6 +6,7 @@ import com.wwjswly.learn.entity.TUser;
 import com.wwjswly.learn.mapper.mongo.repository.UserRepository;
 import com.wwjswly.learn.mq.UserSender;
 import com.wwjswly.learn.service.TUserService;
+import com.wwjswly.learn.service.TUserServiceClient;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -26,9 +27,8 @@ import com.wwjswly.learn.api.response.TUserResponse;
  */
 @Slf4j
 @RestController
-@RequestMapping("/user")
-@Api(value = "用户服务",description = "用户模块")
-public class TUserController {
+@Api(value = "用户服务", description = "用户模块")
+public class TUserController implements TUserServiceClient {
 
     @Autowired
     private UserRepository userRepository;
@@ -51,13 +51,15 @@ public class TUserController {
 
     /**
      * 获取用户列表分页
-     * @param userRequest
+     *
+     * @param userRequest userRequest
      * @return ResponseEntity<TUserResponse>
      */
+    @Override
     @ApiOperation(value = "用户列表", notes = "查询所有用户信息")
-    @ApiImplicitParams({@ApiImplicitParam(paramType = "body", dataType = "TuserRequest", name = "userRequest",value = "查询所有用户信息"),
+    @ApiImplicitParams({@ApiImplicitParam(paramType = "body", dataType = "TuserRequest", name = "userRequest", value = "查询所有用户信息"),
     })
-    @PostMapping("/list")
+    @RequestMapping(value = "/user/list",method = RequestMethod.POST)
     public ResponseEntity<TUserResponse> list(@RequestBody TuserRequest userRequest) {
         return userService.queryList(userRequest);
     }
