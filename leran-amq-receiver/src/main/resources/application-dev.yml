@@ -28,6 +28,8 @@ spring:
         healthCheckPath: /actuator/health
         healthCheckInterval: 10s
         instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        enabled: true
+      enabled: true
 server:
   port: 8011
 mybatis-plus:

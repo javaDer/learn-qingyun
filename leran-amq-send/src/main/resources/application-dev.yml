@@ -18,6 +18,8 @@ spring:
         healthCheckInterval: 10s
         instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
         prefer-ip-address: false
+        enabled: true
+      enabled: true
     inetutils:
       use-only-site-local-interfaces: true
 
@@ -41,7 +43,9 @@ mybatis-plus:
   type-aliases-package: com.wwjswly.learn.entity
 logging:
   level:
-    root: debug
+    com.wwjswly.learn: debug
+  file: send.log
+  path: ../../
 debug: true
 management:
   endpoints:

@@ -19,6 +19,8 @@
         <module>learn-service</module>
         <module>leran-amq-send</module>
         <module>learn-core-api</module>
+        <module>learn-gateway</module>
+        <module>leran-music-service</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
@@ -46,10 +48,6 @@
         </dependencies>
     </dependencyManagement>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-all</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>

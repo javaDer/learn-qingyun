@@ -10,9 +10,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * @author jack
  */
-@EnableDiscoveryClient
 @SpringBootApplication
 @EnableSwagger2
+@EnableDiscoveryClient
 @MapperScan("com.wwjswly.learn.mapper")
 @EnableFeignClients
 public class LearnRecelverApplication {

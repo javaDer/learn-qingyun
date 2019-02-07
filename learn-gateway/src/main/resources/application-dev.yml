@@ -1,0 +1,22 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: gateway-zuulserver
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        tags: version=1.0,author=zhaofa
+        healthCheckPath: /actuator/health
+        healthCheckInterval: 10s
+        instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        enabled: true
+      enabled: true
+zuul:
+  routes:
+    api:
+      path: /user/**
+      service-id: learn-recelver
+
