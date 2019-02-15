@@ -6,6 +6,7 @@
         <groupId>com.wwjswly</groupId>
         <artifactId>learn</artifactId>
         <version>0.0.1</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.wwjswly</groupId>
     <artifactId>leran-amq-receiver</artifactId>

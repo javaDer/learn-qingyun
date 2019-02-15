@@ -6,6 +6,8 @@
         <groupId>com.wwjswly</groupId>
         <artifactId>learn</artifactId>
         <version>0.0.1</version>
+        <relativePath>../pom.xml</relativePath>
+
     </parent>
     <packaging>jar</packaging>
     <modelVersion>4.0.0</modelVersion>
