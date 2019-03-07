@@ -6,6 +6,7 @@ import lombok.Data;
 public class ResponseEntity<T> {
     private int state;
     private T data;
-    private String isSuccess;
+    private boolean isSuccess;
+    private String message;
 
 }

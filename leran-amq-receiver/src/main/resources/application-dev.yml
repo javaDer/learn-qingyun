@@ -47,3 +47,10 @@ management:
   endpoint:
     health:
       show-details: always
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+hystrix:
+  metrics:
+    enabled: true
+    polling-interval-ms: 20000

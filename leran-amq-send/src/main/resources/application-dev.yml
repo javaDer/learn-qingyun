@@ -29,6 +29,7 @@ spring:
     username: guest
     password: guest
     virtual-host: /
+    connection-timeout: 15000
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
@@ -44,8 +45,8 @@ mybatis-plus:
 logging:
   level:
     com.wwjswly.learn: debug
-  file: send.log
-  path: ../../
+#  file: send.log
+#  path: ../../
 debug: true
 management:
   endpoints:

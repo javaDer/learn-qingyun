@@ -21,4 +21,5 @@ public class TUserVo implements Serializable {
     private LocalDateTime createTime;
     private LocalDateTime modifyTime;
     private Integer isDelete;
+    private String messageId;
 }

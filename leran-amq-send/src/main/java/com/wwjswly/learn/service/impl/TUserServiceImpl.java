@@ -41,10 +41,15 @@ public class TUserServiceImpl extends ServiceImpl<TUserMapper, TUser> implements
         QueryWrapper<TUser> queryWrapper = new QueryWrapper<>();
         IPage<TUser> page1 = this.baseMapper.selectPage(page, queryWrapper);
         List<TUser> list = page1.getRecords();
+        if (list.size() == 0) {
+            response.setState(HttpStatus.OK.value());
+            response.setMessage("未找到数据");
+            return response;
+        }
         log.info(page.toString());
         List<TUserVo> tUserVos = ListUtils.copyList(list, TUserVo.class);
-        long count = tUserVos.stream().filter((TUserVo -> TUserVo.getUserEmail().equals("fa20091004@163.com"))).count();
-        log.info(count + "");
+//        long count = tUserVos.stream().filter((TUserVo -> TUserVo.getUserEmail().equals("fa20091004@163.com"))).count();
+//        log.info(count + "");
         TuserResp.setList(tUserVos);
         TuserResp.setCurrent(page1.getCurrent());
         TuserResp.setSize(page1.getSize());

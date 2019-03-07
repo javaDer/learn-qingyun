@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author zhangzhaofa
@@ -35,7 +35,6 @@ public class TUser extends Model<TUser> {
     private String userEmail;
 
     private String userPwd;
-
     /**
      * MD5
      */
@@ -44,27 +43,29 @@ public class TUser extends Model<TUser> {
     private LocalDateTime createTime;
 
     private LocalDateTime modifyTime;
-
+    private String messageId;
     /**
      * 0-1-
      */
     private Integer isDelete;
+
     @Override
     protected Serializable pkVal() {
         return this.id;
     }
+
     @Override
     public String toString() {
         return "TUser{" +
-        "id=" + id +
-        ", userName=" + userName +
-        ", userPhone=" + userPhone +
-        ", userEmail=" + userEmail +
-        ", userPwd=" + userPwd +
-        ", pwdSalt=" + pwdSalt +
-        ", createTime=" + createTime +
-        ", modifyTime=" + modifyTime +
-        ", isDelete=" + isDelete +
-        "}";
+                "id=" + id +
+                ", userName=" + userName +
+                ", userPhone=" + userPhone +
+                ", userEmail=" + userEmail +
+                ", userPwd=" + userPwd +
+                ", pwdSalt=" + pwdSalt +
+                ", createTime=" + createTime +
+                ", modifyTime=" + modifyTime +
+                ", isDelete=" + isDelete +
+                "}";
     }
 }

@@ -19,4 +19,10 @@ zuul:
     api:
       path: /user/**
       service-id: learn-recelver
-
+  host:
+    max-total-connections: 5000
+    connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
