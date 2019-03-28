@@ -20,9 +20,16 @@ zuul:
       path: /user/**
       service-id: learn-recelver
   host:
-    max-total-connections: 5000
+    max-total-connections: 500000
     connect-timeout-millis: 60000
     socket-timeout-millis: 60000
 ribbon:
   ReadTimeout: 10000
   ConnectTimeout: 10000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
