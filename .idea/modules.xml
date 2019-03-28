@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/learn.iml" filepath="$PROJECT_DIR$/learn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn-core-api/learn-core-api.iml" filepath="$PROJECT_DIR$/learn-core-api/learn-core-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn-gateway/learn-gateway.iml" filepath="$PROJECT_DIR$/learn-gateway/learn-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn-service/learn-service.iml" filepath="$PROJECT_DIR$/learn-service/learn-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leran-amq-receiver/leran-amq-receiver.iml" filepath="$PROJECT_DIR$/leran-amq-receiver/leran-amq-receiver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leran-amq-send/leran-amq-send.iml" filepath="$PROJECT_DIR$/leran-amq-send/leran-amq-send.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leran-music-service/leran-music-service.iml" filepath="$PROJECT_DIR$/leran-music-service/leran-music-service.iml" />
+    </modules>
+  </component>
+</project>

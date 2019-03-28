@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="learn-core-api" />
+        <module name="learn-gateway" />
+        <module name="learn-service" />
+        <module name="leran-amq-receiver" />
+        <module name="leran-amq-send" />
+        <module name="leran-music-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="learn" target="1.8" />
+      <module name="learn-core-api" target="1.8" />
+      <module name="learn-gateway" target="1.8" />
+      <module name="learn-service" target="1.8" />
+      <module name="leran-amq-receiver" target="1.8" />
+      <module name="leran-amq-send" target="1.8" />
+      <module name="leran-music-service" target="1.8" />
+      <module name="leran-oauth" target="1.8" />
+      <module name="leran-oauth-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="learn-core-api" options="-parameters" />
+      <module name="learn-gateway" options="-parameters" />
+      <module name="learn-service" options="-parameters" />
+      <module name="leran-amq-receiver" options="-parameters" />
+      <module name="leran-amq-send" options="-parameters" />
+      <module name="leran-music-service" options="-parameters" />
+      <module name="leran-oauth" options="-parameters" />
+      <module name="leran-oauth-service" options="-parameters" />
+    </option>
+  </component>
+</project>
