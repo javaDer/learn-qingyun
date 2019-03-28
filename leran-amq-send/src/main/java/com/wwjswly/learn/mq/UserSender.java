@@ -1,6 +1,6 @@
 package com.wwjswly.learn.mq;
 
-import com.wwjswly.learn.entity.TUser;
+import com.wwjswly.entity.TUser;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

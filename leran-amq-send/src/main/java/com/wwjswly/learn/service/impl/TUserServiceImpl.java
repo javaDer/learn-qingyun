@@ -4,20 +4,18 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.wwjswly.entity.TUser;
 import com.wwjswly.learn.api.base.ResponseEntity;
 import com.wwjswly.learn.api.request.TuserRequest;
 import com.wwjswly.learn.api.response.TUserResponse;
 import com.wwjswly.learn.api.utils.ListUtils;
 import com.wwjswly.learn.api.vo.TUserVo;
-import com.wwjswly.learn.entity.TUser;
 import com.wwjswly.learn.mapper.TUserMapper;
 import com.wwjswly.learn.service.TUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import sun.rmi.runtime.Log;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -48,8 +46,6 @@ public class TUserServiceImpl extends ServiceImpl<TUserMapper, TUser> implements
         }
         log.info(page.toString());
         List<TUserVo> tUserVos = ListUtils.copyList(list, TUserVo.class);
-//        long count = tUserVos.stream().filter((TUserVo -> TUserVo.getUserEmail().equals("fa20091004@163.com"))).count();
-//        log.info(count + "");
         TuserResp.setList(tUserVos);
         TuserResp.setCurrent(page1.getCurrent());
         TuserResp.setSize(page1.getSize());

@@ -1,6 +1,6 @@
 package com.wwjswly.learn.mapper.mongo.repository;
 
-import com.wwjswly.learn.entity.TUser;
+import com.wwjswly.entity.TUser;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**

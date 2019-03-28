@@ -3,7 +3,7 @@
 <mapper namespace="com.wwjswly.learn.mapper.TUserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.wwjswly.learn.entity.TUser">
+    <resultMap id="BaseResultMap" type="com.wwjswly.entity.TUser">
         <id column="id" property="id" />
         <result column="user_name" property="userName" />
         <result column="user_phone" property="userPhone" />
@@ -13,11 +13,12 @@
         <result column="create_time" property="createTime" />
         <result column="modify_time" property="modifyTime" />
         <result column="is_delete" property="isDelete" />
+        <result column="message_id" property="messageId"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, user_name, user_phone, user_email, user_pwd, pwd_salt, create_time, modify_time, is_delete
+        id, user_name, user_phone, user_email, user_pwd, pwd_salt, create_time, modify_time, is_delete,message_id
     </sql>
 
 </mapper>

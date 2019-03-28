@@ -3,16 +3,17 @@
 <mapper namespace="com.wwjswly.learn.mapper.TUserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.wwjswly.learn.entity.TUser">
-        <id column="id" property="id" />
-        <result column="user_name" property="userName" />
-        <result column="user_phone" property="userPhone" />
-        <result column="user_email" property="userEmail" />
-        <result column="user_pwd" property="userPwd" />
-        <result column="pwd_salt" property="pwdSalt" />
-        <result column="create_time" property="createTime" />
-        <result column="modify_time" property="modifyTime" />
-        <result column="is_delete" property="isDelete" />
+    <resultMap id="BaseResultMap" type="com.wwjswly.entity.TUser">
+        <id column="id" property="id"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_phone" property="userPhone"/>
+        <result column="user_email" property="userEmail"/>
+        <result column="user_pwd" property="userPwd"/>
+        <result column="pwd_salt" property="pwdSalt"/>
+        <result column="create_time" property="createTime"/>
+        <result column="modify_time" property="modifyTime"/>
+        <result column="is_delete" property="isDelete"/>
+        <result column="messageId" property="messageId"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->

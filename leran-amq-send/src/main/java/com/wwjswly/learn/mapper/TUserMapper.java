@@ -1,7 +1,7 @@
 package com.wwjswly.learn.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.wwjswly.learn.entity.TUser;
+import com.wwjswly.entity.TUser;
 
 /**
  * <p>

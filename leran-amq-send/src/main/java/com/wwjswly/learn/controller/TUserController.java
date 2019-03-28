@@ -1,8 +1,8 @@
 package com.wwjswly.learn.controller;
 
 
+import com.wwjswly.entity.TUser;
 import com.wwjswly.learn.api.base.ResponseEntity;
-import com.wwjswly.learn.entity.TUser;
 import com.wwjswly.learn.mapper.mongo.repository.UserRepository;
 import com.wwjswly.learn.mq.UserSender;
 import com.wwjswly.learn.service.TUserService;

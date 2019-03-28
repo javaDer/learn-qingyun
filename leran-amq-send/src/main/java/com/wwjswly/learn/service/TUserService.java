@@ -1,8 +1,8 @@
 package com.wwjswly.learn.service;
 
-import com.wwjswly.learn.api.base.ResponseEntity;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.wwjswly.learn.entity.TUser;
+import com.wwjswly.entity.TUser;
+import com.wwjswly.learn.api.base.ResponseEntity;
 import com.wwjswly.learn.api.request.TuserRequest;
 import com.wwjswly.learn.api.response.TUserResponse;
 

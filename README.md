@@ -1,11 +1,13 @@
-# learn
+# learn-qingyun
+    learn-qingyun是一款自己玩的springcloud的脚手架
 
 #### 介绍
-学习java docker+springboot
+学习java docker+springCloud
 
 #### 软件架构
-软件架构说明
-
+ * SpringCloud 
+ * mybatis-plus
+ * lombook
 
 #### 安装教程
 

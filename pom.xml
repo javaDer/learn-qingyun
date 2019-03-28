@@ -9,9 +9,9 @@
         <relativePath/>
     </parent>
     <groupId>com.wwjswly</groupId>
-    <artifactId>learn</artifactId>
+    <artifactId>learn-qingyun</artifactId>
     <version>0.0.1</version>
-    <name>learn</name>
+    <name>learn-qingyun</name>
     <description>Demo project for Spring Boot</description>
     <packaging>pom</packaging>
     <modules>
@@ -20,7 +20,7 @@
         <module>leran-amq-send</module>
         <module>learn-core-api</module>
         <module>learn-gateway</module>
-        <module>leran-music-service</module>
+        <!--<module>leran-music-service</module>-->
     </modules>
     <properties>
         <java.version>1.8</java.version>

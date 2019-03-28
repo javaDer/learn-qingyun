@@ -1,6 +1,6 @@
 package com.wwjswly.learn;
 
-import com.wwjswly.learn.entity.TUser;
+import com.wwjswly.entity.TUser;
 import com.wwjswly.learn.service.TUserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,7 +27,7 @@ public class LearnApplicationTests {
         LocalDateTime time = LocalDateTime.now();
         List<TUser> list = new ArrayList<>();
         for (int i = 1; i < 100; i++) {
-            TUser user = new TUser(Long.valueOf(i), "zhangsan" + i, "1769352" + i, "fa2009100" + i + "@163.com", "sawdke34fe" + i, "he" + i, time, time, "sadasasd", 1);
+            TUser user = new TUser(Long.valueOf(i), "zhangsan" + i, "1769352" + i, "fa2009100" + i + "@163.com", "sawdke34fe" + i, "he" + i, time, time, 1, "23131123");
             list.add(user);
         }
         userService.saveBatch(list);
