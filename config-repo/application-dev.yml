@@ -56,3 +56,4 @@ management:
   endpoint:
     health:
       show-details: always
+from=git-dev-1.0
