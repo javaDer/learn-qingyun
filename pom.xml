@@ -20,6 +20,8 @@
         <module>leran-amq-send</module>
         <module>learn-core-api</module>
         <module>learn-gateway</module>
+        <module>learn-oauth2</module>
+        <module>leran-config-service</module>
         <!--<module>leran-music-service</module>-->
     </modules>
     <properties>
@@ -37,6 +39,14 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>2.8.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-hystrix</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

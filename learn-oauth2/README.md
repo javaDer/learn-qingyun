@@ -6,7 +6,7 @@
 
 **授权码模式:** 
 
-* 访问认证服务器 http://localhost:8888/oauth/authorize?response_type=code&client_id=merryyou&redirect_uri=https://github.com/haoxiaoyong1014?tab=repositories&scope=all
+* 访问认证服务器 http://localhost:8888/oauth/authorize?response_type=code&client_id=merryyou&redirect_uri=https://github.com/javaDer?tab=repositories
 
 * 是否同意并授权
 

@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/learn-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/leran-oauth2/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-oauth2-authorization-server/pom.xml" />
       </list>
     </option>
   </component>

@@ -11,9 +11,9 @@
 
 #### 安装教程
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. mvn clear
+2. mvn install
+3. 配置好redis mysql rabbitMQ
 
 #### 使用说明
 

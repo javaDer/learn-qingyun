@@ -26,10 +26,10 @@ import java.io.UnsupportedEncodingException;
  */
 @RestController
 @SpringBootApplication
-public class SpringBoot2Oauth2Application {
+public class Oauth2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBoot2Oauth2Application.class, args);
+        SpringApplication.run(Oauth2Application.class, args);
     }
 
 }
