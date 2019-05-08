@@ -39,10 +39,9 @@ public class TUserController implements TUserServiceClient {
 
     @ApiOperation(value = "保存用户", notes = "保存用户")
     @PostMapping("/save")
-    public String save() {
-        TUser user = new TUser();
-        user.setId(213123121L);
-        user.setUserName("zhangsan");
+    @ApiImplicitParams({@ApiImplicitParam(paramType = "body", dataType = "TUser", name = "User", value = "用户信息"),
+    })
+    public String save(@RequestBody TUser user) {
         this.userRepository.save(user);
         userSender.send(user);
         log.debug(user.toString() + "");
