@@ -1,8 +1,11 @@
 package com.wwjswly.learn.controller;
 
 
+import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.http.HttpStatus;
 import com.wwjswly.entity.TUser;
 import com.wwjswly.learn.api.base.ResponseEntity;
+import com.wwjswly.learn.api.request.UserSaveRequest;
 import com.wwjswly.learn.mapper.mongo.repository.UserRepository;
 import com.wwjswly.learn.mq.UserSender;
 import com.wwjswly.learn.service.TUserService;
@@ -36,18 +39,6 @@ public class TUserController implements TUserServiceClient {
     private UserSender userSender;
     @Autowired
     private TUserService userService;
-
-    @ApiOperation(value = "保存用户", notes = "保存用户")
-    @PostMapping("/save")
-    @ApiImplicitParams({@ApiImplicitParam(paramType = "body", dataType = "TUser", name = "User", value = "用户信息"),
-    })
-    public String save(@RequestBody TUser user) {
-        this.userRepository.save(user);
-        userSender.send(user);
-        log.debug(user.toString() + "");
-        return "success";
-    }
-
     /**
      * 获取用户列表分页
      *
@@ -58,9 +49,31 @@ public class TUserController implements TUserServiceClient {
     @ApiOperation(value = "用户列表", notes = "查询所有用户信息")
     @ApiImplicitParams({@ApiImplicitParam(paramType = "body", dataType = "TuserRequest", name = "userRequest", value = "查询所有用户信息"),
     })
-    @RequestMapping(value = "/user/list",method = RequestMethod.POST)
+    @RequestMapping(value = "/list", method = RequestMethod.POST)
     public ResponseEntity<TUserResponse> list(@RequestBody TuserRequest userRequest) {
+        log.info("list入参：{}", userRequest.toString());
         return userService.queryList(userRequest);
+    }
+
+    @Override
+    @ApiOperation(value = "用户保存", notes = "用户保存信息")
+    @ApiImplicitParams({@ApiImplicitParam(paramType = "body", dataType = "UserSaveRequest", name = "userSaveRequest", value = "保存用户信息"),
+    })
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    public ResponseEntity save(@RequestBody UserSaveRequest userSaveRequest) {
+        log.info("save入参：{}", userSaveRequest.toString());
+        ResponseEntity response = new ResponseEntity();
+        response.setState(HttpStatus.HTTP_OK);
+        TUser user = new TUser();
+        BeanUtil.copyProperties(userSaveRequest, user);
+        boolean save = userService.save(user);
+        if(save){
+            response.setMessage("保存数据成功");
+        }else {
+            response.setMessage("保存数据失败");
+        }
+        response.setSuccess(save);
+        return response;
     }
 }
 

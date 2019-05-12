@@ -1,35 +1,31 @@
 spring:
   data:
     mongodb:
-      host: 127.0.0.1
+      host: 140.143.161.107
       port: 27017
+      database: learn
   #      username: admin
   #      password: admin
   application:
     name: learn-recelver
   rabbitmq:
-    host: 127.0.0.1
+    host: 140.143.161.107
     port: 5672
-    username: guest
-    password: guest
+    username: admin
+    password: admin
     virtual-host: /
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://127.0.0.1:3306/learn?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://140.143.161.107:3306/learn?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
     username: root
     password: 123456
-  cloud:
-    consul:
-      host: 127.0.0.1
-      port: 8500
-      discovery:
-        tags: version=1.0,author=zhaofa
-        healthCheckPath: /actuator/health
-        healthCheckInterval: 10s
-        instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
-        enabled: true
-      enabled: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.0.101:8761/eureka/
+  instance:
+    prefer-ip-address: true
 server:
   port: 8011
 mybatis-plus:
