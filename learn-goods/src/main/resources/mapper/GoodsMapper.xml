@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wwjswly.learn.goods.mapper.GoodsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wwjswly.entity.goods.Goods">
+        <id column="goods_id" property="goodsId" />
+        <result column="category_id" property="categoryId" />
+        <result column="goods_name" property="goodsName" />
+        <result column="nickname" property="nickname" />
+        <result column="image" property="image" />
+        <result column="del_state" property="delState" />
+        <result column="simple_describe" property="simpleDescribe" />
+        <result column="detail_describe" property="detailDescribe" />
+        <result column="is_marketable" property="isMarketable" />
+        <result column="recommend" property="recommend" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="admin_id" property="adminId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        goods_id, category_id, goods_name, nickname, image, del_state, simple_describe, detail_describe, is_marketable, recommend, create_time, update_time, admin_id
+    </sql>
+
+</mapper>

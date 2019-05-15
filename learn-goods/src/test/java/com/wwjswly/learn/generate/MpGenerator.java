@@ -23,14 +23,14 @@ import java.sql.SQLException;
 @SpringBootTest
 public class MpGenerator {
     @Test
-    public static void generator(String[] args) throws SQLException {
+    public  void  generator() throws SQLException {
         //1. 全局配置
         GlobalConfig config = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         config.setActiveRecord(true) // 是否支持AR模式
                 .setAuthor("zhangzhaofa") // 作者
                 //.setOutputDir("D:\\workspace_mp\\mp03\\src\\main\\java") // 生成路径
-                .setOutputDir(projectPath + "./leran-amq-send/src/main/java") // 生成路径
+                .setOutputDir(projectPath + "./leran-goods/src/main/java") // 生成路径
                 .setFileOverride(true)  // 文件覆盖
                 .setIdType(IdType.AUTO) // 主键策略
                 .setServiceName("%sService")  // 设置生成的service接口的名字的首字母是否为I
@@ -42,7 +42,7 @@ public class MpGenerator {
         DataSourceConfig dsConfig = new DataSourceConfig();
         dsConfig.setDbType(DbType.MYSQL)  // 设置数据库类型
                 .setDriverName("com.mysql.jdbc.Driver")
-                .setUrl("jdbc:mysql://140.143.161.107:3306/qingyun_orders?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false")
+                .setUrl("jdbc:mysql://140.143.161.107:3306/qingyun_goods?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false")
                 .setUsername("root")
                 .setPassword("123456");
 
@@ -55,11 +55,11 @@ public class MpGenerator {
 
                 // 数据库表映射到实体的命名策略
                 .setNaming(NamingStrategy.underline_to_camel)
-                //.setTablePrefix("tbl_")
-                .setInclude("t_user");  // 生成的表
+                .setTablePrefix("t_");
+//                .setInclude("t_user");  // 生成的表
         //4. 包名策略配置
         PackageConfig pkConfig = new PackageConfig();
-        pkConfig.setParent("com.wwjswly.learn")
+        pkConfig.setParent("com.wwjswly.learn.goods")
                 .setMapper("mapper")//dao
                 .setService("service")//servcie
                 .setServiceImpl("service.impl")

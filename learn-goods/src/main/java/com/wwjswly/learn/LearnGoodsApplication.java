@@ -17,10 +17,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableDiscoveryClient
 @EnableFeignClients
 @EnableCircuitBreaker
-public class LearnSendApplication {
+public class LearnGoodsApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LearnSendApplication.class, args);
+        SpringApplication.run(LearnGoodsApplication.class, args);
     }
 
 }

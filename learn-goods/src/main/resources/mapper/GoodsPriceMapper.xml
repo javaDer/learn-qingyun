@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wwjswly.learn.goods.mapper.GoodsPriceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wwjswly.entity.goods.GoodsPrice">
+        <id column="price_id" property="priceId" />
+        <result column="goods_id" property="goodsId" />
+        <result column="unit_name" property="unitName" />
+        <result column="retail_price" property="retailPrice" />
+        <result column="buy_price" property="buyPrice" />
+        <result column="wholesale_price" property="wholesalePrice" />
+        <result column="state" property="state" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="admin_id" property="adminId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        price_id, goods_id, unit_name, retail_price, buy_price, wholesale_price, state, create_time, update_time, admin_id
+    </sql>
+
+</mapper>

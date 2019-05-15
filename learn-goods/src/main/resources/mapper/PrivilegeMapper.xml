@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wwjswly.learn.goods.mapper.PrivilegeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wwjswly.entity.goods.Privilege">
+        <id column="privilege_id" property="privilegeId" />
+        <result column="user_id" property="userId" />
+        <result column="is_wholeSalePrice" property="isWholesaleprice" />
+        <result column="isDiscount" property="isDiscount" />
+        <result column="discount" property="discount" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="state" property="state" />
+        <result column="admin_id" property="adminId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        privilege_id, user_id, is_wholeSalePrice, isDiscount, discount, create_time, update_time, state, admin_id
+    </sql>
+
+</mapper>

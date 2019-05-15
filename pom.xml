@@ -22,6 +22,7 @@
         <module>learn-gateway</module>
         <module>learn-oauth2</module>
         <module>register</module>
+        <module>learn-goods</module>
         <!--        <module>leran-config-service</module>-->
         <!--<module>leran-music-service</module>-->
     </modules>

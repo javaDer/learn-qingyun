@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wwjswly.learn.goods.mapper.MessageMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wwjswly.entity.goods.Message">
+        <id column="message_id" property="messageId" />
+        <result column="message_title" property="messageTitle" />
+        <result column="message_short_context" property="messageShortContext" />
+        <result column="message_context" property="messageContext" />
+        <result column="url" property="url" />
+        <result column="push_time" property="pushTime" />
+        <result column="push" property="push" />
+        <result column="push_now" property="pushNow" />
+        <result column="is_all" property="isAll" />
+        <result column="user_ids" property="userIds" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="del_state" property="delState" />
+        <result column="admin_id" property="adminId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        message_id, message_title, message_short_context, message_context, url, push_time, push, push_now, is_all, user_ids, create_time, update_time, del_state, admin_id
+    </sql>
+
+</mapper>

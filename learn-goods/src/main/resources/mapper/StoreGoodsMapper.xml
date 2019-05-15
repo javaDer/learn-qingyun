@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wwjswly.learn.goods.mapper.StoreGoodsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wwjswly.entity.goods.StoreGoods">
+        <id column="store_id" property="storeId" />
+        <result column="user_id" property="userId" />
+        <result column="goods_id" property="goodsId" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="state" property="state" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        store_id, user_id, goods_id, create_time, update_time, state
+    </sql>
+
+</mapper>
