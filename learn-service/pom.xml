@@ -27,7 +27,6 @@
         <dependency>
             <groupId>com.wwjswly</groupId>
             <artifactId>learn-core-api</artifactId>
-            <version>0.0.1</version>
         </dependency>
     </dependencies>
     <build>

@@ -2,6 +2,9 @@ package com.wwjswly.learn.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.wwjswly.entity.goods.Goods;
+import com.wwjswly.learn.api.base.ResponseEntity;
+import com.wwjswly.learn.api.request.goods.GoodsRequest;
+import com.wwjswly.learn.api.vo.goods.GoodsVo;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.wwjswly.entity.goods.Goods;
  */
 public interface GoodsService extends IService<Goods> {
 
+    ResponseEntity<GoodsVo> queryList(GoodsRequest request);
 }

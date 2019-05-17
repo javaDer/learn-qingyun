@@ -46,7 +46,7 @@ public class TUserController {
         return user;
     }
 
-    @RequestMapping(value = "/user/list", method = RequestMethod.POST)
+    @RequestMapping(value = "/list", method = RequestMethod.POST)
     public ResponseEntity<TUserResponse> list(@RequestBody TuserRequest userRequest) {
         ResponseEntity<TUserResponse> list = this.client.list(userRequest);
         log.info("fegin返回数据:{}", list);
