@@ -7,7 +7,7 @@ spring:
 #      password: admin
       database: learn
   application:
-    name: learn-order
+    name: learn-goods
 #eureka:
 #  client:
 #    serviceUrl:
@@ -17,22 +17,22 @@ spring:
   rabbitmq:
     host: 140.143.161.107
     port: 5672
-#    username: admin
-#    password: admin
+    username: admin
+    password: admin
     virtual-host: /
     connection-timeout: 15000
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://140.143.161.107:3306/learn?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://140.143.161.107:3306/qingyun_goods?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
     username: root
     password: 123456
 #mybatis-plus
 server:
-  port: 8081
+  port: 8082
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**Mapper.xml
-  type-aliases-package: com.wwjswly.learn.entity
+  type-aliases-package: com.wwjswly.learn.entity.goods
 logging:
   level:
     com.wwjswly.learn: debug
@@ -42,9 +42,8 @@ debug: true
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://140.143.161.107:8761/eureka/
 #      defaultZone: http://${eureka.host:192.168.0.101}:${eureka.port:8761}/eureka/
-
+      defaultZone: http://140.143.161.107:8761/eureka/
   instance:
     prefer-ip-address: true
   management:

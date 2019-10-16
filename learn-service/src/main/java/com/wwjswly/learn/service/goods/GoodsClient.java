@@ -20,6 +20,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(value = "learn-goods", fallback = GoodsFallBack.class)
 public interface GoodsClient {
     @RequestMapping(value = "/goods/list", method = RequestMethod.POST)
-    ResponseEntity<GoodsVo> list(@RequestBody GoodsRequest request);
+    ResponseEntity<GoodsVo> goodsList(@RequestBody GoodsRequest request);
 }
 

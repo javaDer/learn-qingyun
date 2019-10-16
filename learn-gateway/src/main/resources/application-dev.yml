@@ -6,7 +6,6 @@ spring:
 eureka:
     client:
       serviceUrl:
-
 #        defaultZone: http://${eureka.host:192.168.0.101}:${eureka.port:8761}/eureka/
         defaultZone: http://140.143.161.107:8761/eureka/
     instance:

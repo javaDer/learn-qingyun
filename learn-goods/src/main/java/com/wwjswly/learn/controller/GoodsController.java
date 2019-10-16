@@ -38,7 +38,7 @@ public class GoodsController implements GoodsClient {
     @ApiOperation(value = "产品种类列表", notes = "产品种类列表")
     @ApiImplicitParams({@ApiImplicitParam(paramType = "body", dataType = "GoodsRequest", name = "request", value = "产品列表"),
     })
-    public ResponseEntity<GoodsVo> list(@RequestBody GoodsRequest request) {
+    public ResponseEntity<GoodsVo> goodsList(@RequestBody GoodsRequest request) {
         log.info("list入参：{}", request.toString());
         ResponseEntity<GoodsVo> response = goodsService.queryList(request);
         return response;

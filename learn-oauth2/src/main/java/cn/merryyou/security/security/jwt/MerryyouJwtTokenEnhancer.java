@@ -14,7 +14,7 @@ import java.util.Map;
  * github:https://github.com/haoxiaoyong1014
  */
 public class MerryyouJwtTokenEnhancer implements TokenEnhancer {
-
+    @Override
     public OAuth2AccessToken enhance(OAuth2AccessToken accessToken, OAuth2Authentication authentication) {
         Map<String, Object> info = new HashMap<String, Object>();
         info.put("blog", "https://longfeizheng.github.io/");

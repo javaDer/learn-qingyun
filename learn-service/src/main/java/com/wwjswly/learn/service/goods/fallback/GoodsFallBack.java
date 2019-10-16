@@ -13,7 +13,7 @@ import com.wwjswly.learn.service.goods.GoodsClient;
  **/
 public class GoodsFallBack implements GoodsClient {
     @Override
-    public ResponseEntity<GoodsVo> list(GoodsRequest request) {
+    public ResponseEntity<GoodsVo> goodsList(GoodsRequest request) {
         return null;
     }
 }

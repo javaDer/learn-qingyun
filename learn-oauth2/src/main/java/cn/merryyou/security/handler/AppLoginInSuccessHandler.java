@@ -29,7 +29,6 @@ import java.util.HashMap;
  * E-mail:hxyHelloWorld@163.com
  * github:https://github.com/haoxiaoyong1014
  */
-
 @Slf4j
 @Component("appLoginInSuccessHandler")
 public class AppLoginInSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
@@ -62,7 +61,6 @@ public class AppLoginInSuccessHandler extends SavedRequestAwareAuthenticationSuc
 
         String clientId = tokens[0];
         String clientSecret = tokens[1];
-
         ClientDetails clientDetails = clientDetailsService.loadClientByClientId(clientId);
 
         if (clientDetails == null) {

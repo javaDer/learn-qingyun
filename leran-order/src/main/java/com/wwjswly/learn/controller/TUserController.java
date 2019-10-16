@@ -10,6 +10,7 @@ import com.wwjswly.learn.mapper.mongo.repository.UserRepository;
 import com.wwjswly.learn.mq.UserSender;
 import com.wwjswly.learn.service.TUserService;
 import com.wwjswly.learn.service.TUserServiceClient;
+import com.wwjswly.learn.service.goods.GoodsClient;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -39,6 +40,8 @@ public class TUserController implements TUserServiceClient {
     private UserSender userSender;
     @Autowired
     private TUserService userService;
+    @Autowired
+    private GoodsClient goodsClient;
     /**
      * 获取用户列表分页
      *

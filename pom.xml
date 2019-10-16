@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.3.RELEASE</version>
+        <version>2.1.5.RELEASE</version>
         <relativePath/>
     </parent>
     <groupId>com.wwjswly</groupId>
@@ -17,12 +17,13 @@
     <modules>
         <module>leran-amq-receiver</module>
         <module>learn-service</module>
-        <module>leran-order</module>
+<!--        <module>leran-order</module>-->
         <module>learn-core-api</module>
         <module>learn-gateway</module>
         <module>learn-oauth2</module>
         <module>register</module>
-        <module>learn-goods</module>
+<!--        <module>learn-goods</module>-->
+        <module>learn-webflux</module>
         <!--        <module>leran-config-service</module>-->
         <!--<module>leran-music-service</module>-->
     </modules>
@@ -168,6 +169,16 @@
                 <groupId>org.freemarker</groupId>
                 <artifactId>freemarker</artifactId>
                 <version>2.3.28</version>
+            </dependency>
+            <dependency>
+                <groupId>com.wwjswly</groupId>
+                <artifactId>learn-core-api</artifactId>
+                <version>0.0.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.wwjswly.learn.service</groupId>
+                <artifactId>learn-service</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
