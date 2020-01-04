@@ -6,36 +6,46 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="learn-oauth2" />
+        <module name="learn-webflux" />
+        <module name="learn-report" />
         <module name="learn-core-api" />
-        <module name="learn-gateway" />
         <module name="learn-service" />
+        <module name="register" />
         <module name="leran-amq-receiver" />
-        <module name="leran-amq-send" />
-        <module name="leran-music-service" />
+        <module name="learn-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="learn" target="1.8" />
       <module name="learn-core-api" target="1.8" />
       <module name="learn-gateway" target="1.8" />
+      <module name="learn-oauth2" target="1.8" />
+      <module name="learn-report" target="1.8" />
       <module name="learn-service" target="1.8" />
+      <module name="learn-webflux" target="1.8" />
       <module name="leran-amq-receiver" target="1.8" />
       <module name="leran-amq-send" target="1.8" />
       <module name="leran-music-service" target="1.8" />
       <module name="leran-oauth" target="1.8" />
       <module name="leran-oauth-service" target="1.8" />
+      <module name="register" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="learn-core-api" options="-parameters" />
       <module name="learn-gateway" options="-parameters" />
+      <module name="learn-oauth2" options="-parameters" />
+      <module name="learn-report" options="-parameters" />
       <module name="learn-service" options="-parameters" />
+      <module name="learn-webflux" options="-parameters" />
       <module name="leran-amq-receiver" options="-parameters" />
       <module name="leran-amq-send" options="-parameters" />
       <module name="leran-music-service" options="-parameters" />
       <module name="leran-oauth" options="-parameters" />
       <module name="leran-oauth-service" options="-parameters" />
+      <module name="register" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="register:war">
+    <output-path>$PROJECT_DIR$/register/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>register</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="register-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="register:war exploded" />
+    </root>
+  </artifact>
+</component>

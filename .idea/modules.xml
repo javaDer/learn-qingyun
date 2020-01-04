@@ -5,10 +5,12 @@
       <module fileurl="file://$PROJECT_DIR$/learn.iml" filepath="$PROJECT_DIR$/learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn-core-api/learn-core-api.iml" filepath="$PROJECT_DIR$/learn-core-api/learn-core-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn-gateway/learn-gateway.iml" filepath="$PROJECT_DIR$/learn-gateway/learn-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn-oauth2/learn-oauth2.iml" filepath="$PROJECT_DIR$/learn-oauth2/learn-oauth2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn-report/learn-report.iml" filepath="$PROJECT_DIR$/learn-report/learn-report.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn-service/learn-service.iml" filepath="$PROJECT_DIR$/learn-service/learn-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn-webflux/learn-webflux.iml" filepath="$PROJECT_DIR$/learn-webflux/learn-webflux.iml" />
       <module fileurl="file://$PROJECT_DIR$/leran-amq-receiver/leran-amq-receiver.iml" filepath="$PROJECT_DIR$/leran-amq-receiver/leran-amq-receiver.iml" />
-      <module fileurl="file://$PROJECT_DIR$/leran-amq-send/leran-amq-send.iml" filepath="$PROJECT_DIR$/leran-amq-send/leran-amq-send.iml" />
-      <module fileurl="file://$PROJECT_DIR$/leran-music-service/leran-music-service.iml" filepath="$PROJECT_DIR$/leran-music-service/leran-music-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/register/register.iml" filepath="$PROJECT_DIR$/register/register.iml" />
     </modules>
   </component>
 </project>
